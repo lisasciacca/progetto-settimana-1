@@ -99,8 +99,9 @@ main {
 h2 {
     color: hsl(220, 60%, 25%);
     font-size: 1.65em;
-    padding-top: 0.8em;
-    padding-bottom: 0.8em;
+    padding-top: 0.5em;
+    padding-bottom: 0.3em;
+    margin: 0;
 }
 
 main section {
@@ -123,6 +124,8 @@ main section {
     text-decoration: none;
     color: #1F3D7A;
     font-weight: bold;
+    float: right;
+    
 }
 
 .tornaSu:hover {
@@ -135,7 +138,7 @@ main section h2::before {
     content: '\2756';
     color: hsl(45, 90%, 50%);
     font-size: 0.7em;
-    padding: 0.5em;
+    padding: 0.5em 0.5em 0.5em 0;
 }
 
 /*Sezione Chi sono*/
@@ -185,14 +188,15 @@ figcaption {
 
 /*Competenze*/
 
-.liste{
+.liste {
     display: inline-block;
     width: 100%;
-    
+
 }
 
 .competenzeul {
     line-height: 1.7em;
+    padding: 0;
 }
 
 .competenzeul li:first-child {
@@ -202,7 +206,7 @@ figcaption {
 .rigaLiCom {
     float: left;
     width: 46%;
-    margin-left: 3%;
+    margin-left: 2%;
 }
 
 .rigaLiCom p:first-of-type {
@@ -235,19 +239,22 @@ figcaption {
 
 /*Barra livello*/
 
+.barra {
+    margin-top: 3%;
+}
+
 .barraLivello {
     background-color: #ece6d8;
     width: 95%;
-    height: 1.5em; 
-    border-radius: 20px;
-    margin: 0 auto; 
+    height: 1.2em;
+    margin: 0 auto;
 }
 
 .barraInterna {
     background-color: hsl(45, 90%, 50%);
-    height: 1.5em; 
-    border-radius: 20px;
+    height: 1.2em;
     margin: -26.45px 9.875px 0 9.875px;
+    border-collapse: collapse;
 }
 
 #html {
@@ -411,7 +418,7 @@ button:hover {
 .altriContatti {
     background-color: #F5F7FB;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    border: 2px solid rgb(243, 184, 184);
+    border: 2px solid hsl(45, 90%, 60%);
     border-radius: 5px;
     text-align: center;
     padding: 30px;
