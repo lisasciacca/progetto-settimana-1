@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Presentazione di L. Sciacca</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+</head>
+
+<!--Header della pagina con mappa di navigazione-->
+
+<body>
+    <header id="header">
+        <h1>Lisa Irene Sciacca</h1>
+        <p><span class="studentefs">Studentessa Full Stack</span> - corso Epicode 2026</p>
+        <nav>
+            <ul>
+                <li><a href="#chiSono" class="ulnav">Chi sono</a></li>
+                <li><a href="#competenze" class="ulnav">Competenze</a></li>
+                <li><a href="#esperienze" class="ulnav">Esperienze</a></li>
+                <li><a href="#progetti" class="ulnav">Progetti</a></li>
+                <li><a href="#contatti" class="ulnav">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Pagina principale-->
+
+    <main>
+
+        <!--Sezione di presentazione "Chi Sono"-->
+
+        <section id="sezChisono">
+            <h2 id="chiSono">Chi sono</h2>
+            <figure>
+                <img src="https://www.ildialogodimonza.it/wp-content/uploads/2016/06/Coniglietto1.jpg"
+                    alt="Foto che ritrae Lisa Irene Sciacca" class="avatar">
+                <figcaption>Foto di L. Sciacca</figcaption>
+            </figure>
+            <p class="incipit">Mi chiamo Lisa Irene Sciacca, e sto imparando a programmare. Studio sviluppo web con
+                <span class="bold">Epicode</span>
+                e ogni giorno aggingo qualcosa di nuovo a quiesta pagina. Mi piace lavorare in gruppo, leggere
+                documentazione tecnica e capire come funzionano le cose.
+            </p>
+            <p>Vivo in Sicilia. Ho una formazione precedente in <span class="em">Marketing</span> e ore sto cambiando
+                settore. Cerco un
+                primo ruolo come slivuppatore frontend. </p>
+            <a href="#header" class="tornaSu">Torna su</a></li>
+        </section>
+
+        <!--Sezione competenze-->
+
+        <section class="sezCompetenze">
+            <h2 id="competenze">Competenze</h2>
+            <p>Le tecnologie che vedo durante le prime settimane di corso sono:</p>
+            <ul class="competenzeul">
+                <li class="bold">HTML - struttura della pagina</li>
+                <li>CSS - stile e impaginazione</li>
+                <li>Git e GitHub - versionamento del codice</li>
+                <li>Visual Studio Code - editor di lavoro</li>
+            </ul>
+            <a href="#header" class="tornaSu">Torna su</a></li>
+        </section>
+
+        <!--Sezione esperienze-->
+        <section>
+            <h2 id="esperienze">Esperienze</h2>
+            <p>Un riepilogo del mio percorso formativo e lavorativo recente.</p>
+            <table>
+                <caption>Esperienze formative e lavorative</caption>
+                <thead>
+                    <tr>
+                        <th>Anno</th>
+                        <th>Ruolo</th>
+                        <th>Azienda/Scuola</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2026</td>
+                        <td>Studentessa Full Stack</td>
+                        <td>Epicode</td>
+                    </tr>
+                    <tr>
+                        <td>2020-2026</td>
+                        <td>Creator's manager</td>
+                        <td>Autonomo</td>
+                    </tr>
+                    <tr>
+                        <td>2019-2021</td>
+                        <td>Direttore artistico</td>
+                        <td>Otaku-box</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!--Sezione progetti-->
+
+        <section>
+            <h2 id="progetti">Progetti</h2>
+            <p>I lavori fatti durante le prime settimane di corso.</p>
+
+            <article class="project-recipe">
+                <h3>Pagina ricetta</h3>
+                <p>Una pagina con titolo, ingredienti e procedura. Esercizio di markup semantico applicato al
+                    contenuto
+                    reale.
+                </p>
+                <a href="javascript:void(0)" target="_blank"> Vedi su GitHub</a>
+            </article>
+
+            <article class="project-card">
+                <h3>Card di presentazione</h3>
+                <p>Un biglietto digitale con nome, ruolo e link ai social. Esercizio di sintesi sulla struttura
+                    HTML.
+                </p>
+                <a href="javascript:void(0)" target="_blank"> Vedi su GitHub</a>
+            </article>
+            <a href="#header" class="tornaSu">Torna su</a></li>
+        </section>
+
+        <!--Contatti-->
+
+        <section>
+            <h2 id="contattami">Contattami</h2>
+            <p>Compila il form per scrivermi. Ti rispondo entro 24 ore.</p>
+            <form action="submit" method="get">
+                <label for="name">Nome</label>
+                <br />
+                <input type="text" id="name" required name="name" placeholder="Il tuo nome">
+                <br /><br />
+                <label for="email">E-mail</label>
+                <br />
+                <input type="email" id="email" required name="email" placeholder="tu@esempio.it">
+                <br /><br />
+                <label for="purpuse">Motivo del contatto</label>
+                <br />
+                <select id="purpuse" name="purpuse">
+                    <option selected>&nbsp;</option>
+                    <option value="work">Proposta di lavoro</option>
+                    <option value="question">Domande sui progetti</option>
+                    <option value="bookdate">Appuntamento</option>
+                </select>
+                <br /><br />
+                <label for="date">Data per l'appuntamento</label>
+                <br />
+                <input type="date" id="date" name="date">
+                <br /><br />
+                <label for="purpuse">Motivo del contatto</label>
+                <br />
+                <textarea placeholder="Scrivi qui il tuo messaggio..." id="purpuse" name="purpuse" rows="5"></textarea>
+                <br /><br />
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label id="checkbox" for="checkbox">Accetto di essere ricontattato all'indirizzo indicato.</label>
+                <br />
+                <button type="submit">Invia</button>
+            </form>
+            <br />
+            <a href="#header" class="tornaSu">Torna su</a></li>
+        </section>
+
+        <div class="altriContatti">
+            <h4>Altri contatti</h4>
+            <p>Sono presente su queste piattaforme professionali, dove puoi seguire i miei progetti e contattarmi.
+                <br /><br />
+                Profilo GitHub: <a href="https://github.com/lisasciacca" target="_blank">github.com/lisasciacca</a>
+                <br />
+                Profilo Linkedin: <a href="https://linkedin.com/in/lisasciacca"
+                    target="_blank">linkedin.com/in/lisasciacca</a> <br />
+            </p>
+            <br />
+            <a href="#header" class="tornaSu">Torna su</a></li>
+            <br /><br />
+        </div>
+    </main>
+
+    <!--Footer-->
+
+    <footer>
+        <p>Autorizzo il trattamento dei miei dati personali ai sensi dell'art. 13 D.Lgs 30 giugno 2003 n.196 e dell'art.
+            13 del Regolamento (UE) 2016/679.</p>
+        <p>© 2026 Lisa Irene Sciacca</p>
+    </footer>
+</body>
+
+</html>
