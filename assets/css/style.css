@@ -29,6 +29,7 @@ h3 {
 header {
     background-image: url(../img/header-bg.jpg);
     background-size: cover;
+    background-position: center;
     text-align: center;
     width: 100%;
     padding: 60px 20px 40px;
