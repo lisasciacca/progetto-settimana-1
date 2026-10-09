@@ -188,6 +188,7 @@ figcaption {
 .liste{
     display: inline-block;
     width: 100%;
+    
 }
 
 .competenzeul {
@@ -201,6 +202,7 @@ figcaption {
 .rigaLiCom {
     float: left;
     width: 46%;
+    margin-left: 3%;
 }
 
 .rigaLiCom p:first-of-type {
@@ -217,29 +219,55 @@ figcaption {
 
 .competenzeul li {
     border-bottom: 2px solid #EEE9DC;
+    max-height: 125px;
 }
 
+.titoloLi {
+    font-weight: bold;
+    color: #223B6B;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
 
-  
-
+.titoloLi h4 {
+    margin: 2% 0 2% 0;
+}
 
 /*Barra livello*/
 
 .barraLivello {
     background-color: #ece6d8;
-    border: 5px solid black;
-    width: 50%;
-    height: 40px; 
+    width: 95%;
+    height: 1.5em; 
     border-radius: 20px;
+    margin: 0 auto; 
 }
 
 .barraInterna {
     background-color: hsl(45, 90%, 50%);
-    border: 5px solid black;
-    width: 50%;
-    height: 40px; 
+    height: 1.5em; 
     border-radius: 20px;
-    margin-top: -7%;
+    margin: -26.45px 9.875px 0 9.875px;
+}
+
+#html {
+    width: 75%;
+}
+
+#css3 {
+    width: 67%;
+}
+
+#git {
+    width: 59%;
+}
+
+#linea {
+    width: 45%;
+}
+
+#markdown {
+    width: 71%;
 }
 
 /*Esperienze*/
