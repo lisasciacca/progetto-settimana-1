@@ -386,10 +386,6 @@ section article h3 {
 }
 
 /*Contattami
-bordo campi form: 1px solid #d6cfbf
-sfondo campi form: #fbf8f1
-al focus: sfondo bianco - bordo hsl(220, 60%, 30%)
-placeholder: #a39b87
 label consenso: #2b2b2b
 button: testo bianco, sfondo hsl(220, 60%, 30%), shadow 0 2px 4px rgba(0, 0, 0, 0.1)
 hover button: sfondo hsl(220, 60%, 45%), shadow 0 4px 10px rgba(0, 0, 0, 0.18)*/
@@ -404,29 +400,41 @@ input,
 textarea {
     margin-top: 5px;
     font-size: 1em;
-    width: 60%;
+    width: 100%;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #F5F7FB;
+    background-color: #fbf8f1;
+    border: 1px solid #d6cfbf;
+}
+
+input:focus {
+    background-color: white;
+    border: 1px solid hsl(220, 60%, 30%) ;
+}
+
+textarea:focus {
+    background-color: white;
+    border: 1px solid hsl(220, 60%, 30%) ;
+}
+
+
+textarea::placeholder{
+    color: #a39b87;
+}
+
+input::placeholder{
+    color: #a39b87;
 }
 
 #checkbox {
     width: 2%;
-}
-
-input:focus {
-    background-color: #232323;
-    color: whitesmoke;
-}
-
-textarea:focus {
-    background-color: #232323;
-    color: whitesmoke;
+    color:  #2b2b2b;
 }
 
 select {
     margin-top: 5px;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    background-color: #F5F7FB;
+    background-color: #fbf8f1;
+    border: 1px solid #d6cfbf;
 }
 
 button {
