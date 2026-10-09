@@ -317,6 +317,7 @@ table caption {
     padding: 5px;
     color: hsl(220, 30%, 40%);
     text-align: left;
+    font-style: italic;
 }
 
 td {
@@ -419,10 +420,12 @@ textarea:focus {
 
 textarea::placeholder{
     color: #a39b87;
+    font-style: italic;
 }
 
 input::placeholder{
     color: #a39b87;
+    font-style: italic;
 }
 
 #checkbox {
@@ -435,6 +438,7 @@ select {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #fbf8f1;
     border: 1px solid #d6cfbf;
+    width: 100%;
 }
 
 button {
