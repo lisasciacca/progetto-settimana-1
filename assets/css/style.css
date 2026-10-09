@@ -238,6 +238,7 @@ figcaption {
 .competenzeul li {
     border-bottom: 2px solid #EEE9DC;
     max-height: 125px;
+    overflow: hidden;
 }
 
 .titoloLi {
@@ -311,6 +312,7 @@ table {
     width: 800px;
     text-align: left;
     border-collapse: collapse;
+    
 }
 
 table caption {
