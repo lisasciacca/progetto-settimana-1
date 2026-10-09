@@ -256,6 +256,7 @@ figcaption {
 
 .barra {
     margin-top: 3%;
+    border-collapse: collapse;
 }
 
 .barraLivello {
