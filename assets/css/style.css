@@ -51,10 +51,11 @@ header p {
     font-style: italic;
 }
 
-/*Text Studente Full-Stack*/
+/*Text Studente Full-Stack
 .studentefs {
     font-weight: bold;
 }
+    */
 
 /*Unorder list Mappa della pagina*/
 header ul {
@@ -67,7 +68,7 @@ nav ul li {
     padding: 8px 16px;
     margin: 0 4px;
     border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 0.5px solid #FFFFFF;
 }
 
 nav ul li:hover {
@@ -77,22 +78,29 @@ nav ul li:hover {
 
 
 .ulnav {
-    color: hsl(67, 98%, 26%);
+    color: #FFFFFF;
     line-height: 2.7em;
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding: 0px 5px;
-
+    text-decoration: none;
+    
 }
 
 header a:hover {
-    color: #F44A4A;
+    color: #EFCA42;
+}
+
+i {
+    margin: 8px 6px 0 0;
 }
 
 /*Main*/
 
 main {
     max-width: 920px;
-    margin: 0 auto;
+    margin-top: -120px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 40px 20px;
 }
 
@@ -100,7 +108,7 @@ h2 {
     color: hsl(220, 60%, 25%);
     font-size: 1.65em;
     padding-top: 0.5em;
-    padding-bottom: 0.3em;
+    padding-bottom: 0.4em;
     margin: 0;
 }
 
@@ -125,11 +133,10 @@ main section {
     color: #1F3D7A;
     font-weight: bold;
     float: right;
-    
 }
 
 .tornaSu:hover {
-    background-color: rgb(243, 184, 184);
+    background-color: #F9F5EA;
 }
 
 /*simbolo aggiunto*/
@@ -187,6 +194,13 @@ figcaption {
 }
 
 /*Competenze*/
+
+.autovalutazione {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #5A6D91;
+    margin-bottom: 0;
+}
 
 .liste {
     display: inline-block;
@@ -282,35 +296,42 @@ figcaption {
 table,
 tr,
 td {
-    border: 1px solid #ece6d8;
+    border-bottom: 1px solid #ece6d8;
     padding: 3px;
-    text-align: center;
 }
 
 table th {
     color: hsl(220, 60%, 25%);
+    background-color: #F9F5EA;
+    height: 2.5em;
+   /* padding-left: 1em; */
 }
 
 table {
-    max-width: 900px;
-    margin: 0 auto;
+    width: 800px;
+    text-align: left;
+    border-collapse: collapse;
 }
 
 table caption {
     padding: 5px;
     color: hsl(220, 30%, 40%);
+    text-align: left;
 }
 
 td {
-    padding-right: 2em;
-    padding-left: 2em;
+    padding-right: 0px;
+}
+
+.tableTr {
+    height: 2.5em;
+    margin-left: 2em;
 }
 
 
 /*Progetti
 Ho ragruppato le classi perchè avevano dei valori in comune che devono restare sempre tali*
-link nei progetti: hsl(220, 60%, 30%)
-hover link nei progetti: hsl(220, 60%, 45%) - bordo hsl(45, 90%, 50%)
+hover link nei progetti: 
 link alla pagina progetti: hsl(220, 60%, 30%) - bordo hsl(45, 90%, 50%)
 hover link alla pagina progetti: hsl(220, 60%, 45%)*/
 
@@ -334,17 +355,28 @@ section article:last-of-type {
     margin-bottom: 5%;
 }
 
+.vediSu {
+    text-decoration: none;
+    color: hsl(220, 60%, 30%);
+    font-weight: bold;
+}
+
+.vediSu:hover{
+    color: hsl(220, 60%, 45%);
+    border: hsl(45, 90%, 50%);
+}
+
 /*NEW content*/
 
 section article:first-of-type h3::after {
     content: "NEW";
     display: inline-block;
-    padding: 2px 8px;
-    margin-left: 12px;
+    padding: 1px 4px;
+    margin-left: 8px;
     background-color: #F44A4A;
     color: whitesmoke;
     border-radius: 3px;
-    font-size: 0, 75rem;
+    font-size: 1rem;
 }
 
 section article h3 {
