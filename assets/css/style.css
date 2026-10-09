@@ -264,14 +264,16 @@ figcaption {
     background-color: #ece6d8;
     width: 95%;
     height: 1.2em;
-    margin: 0 auto;
+    margin: 0;
+    border-radius: 10px;
 }
 
 .barraInterna {
     background-color: hsl(45, 90%, 50%);
     height: 1.2em;
-    margin: -26.45px 9.875px 0 9.875px;
+    margin: 0;
     border-collapse: collapse;
+    border-radius: 10px;
 }
 
 #html {
