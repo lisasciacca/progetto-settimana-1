@@ -454,7 +454,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/*AltriContatti*/
+/*AltriContatti
 
 .altriContatti {
     background-color: #F5F7FB;
@@ -464,18 +464,29 @@ button:hover {
     text-align: center;
     padding: 30px;
     font-size: 0.95rem;
-}
+}*/
 
-/*Footer 
-sfondo footer: hsl(220, 40%, 15%)
-icone social nel footer: rgba(255, 255, 255, 0.08)
-hover su icone social: testo hsl(220, 60%, 20%), sfondo hsl(45, 90%, 60%) */
+/*Footer*/
 
 footer {
-    background-color: #172136;
+    background-color: hsl(220, 40%, 15%);
     color: whitesmoke;
     text-align: center;
     padding: 2px;
     font-size: 0.9rem;
     width: 100%;
+}
+
+footer nav i{
+    background-color: rgba(255, 255, 255, 0.08);
+    color: whitesmoke;
+    font-size: 2em;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+footer nav i:hover{
+    color: testo hsl(220, 60%, 20%);
+    background-color: hsl(45, 90%, 60%);
 }
