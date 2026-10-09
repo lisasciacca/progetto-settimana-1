@@ -9,24 +9,31 @@
 
 html,
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.2em;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1.05em;
     line-height: 1.2;
     margin: 0px;
     padding: 0px;
-    background-color: white;
+    background-color: #f4f1ec;
+    color: #2b2b2b;
+}
 
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', Georgia, serif;
 }
 
 /* Header*/
 
 header {
-    background-image: url(https://images.pexels.com/photos/9329360/pexels-photo-9329360.jpeg?_gl=1*pmbe67*_ga*MTA1MDA1ODE3NS4xNzkxMzc1OTky*_ga_8JE65Q40S6*czE3OTE0NjIzNTYkbzMkZzEkdDE3OTE0NjI0ODAkajYwJGwwJGgw);
+    background-image: url(../img/header-bg.jpg);
     background-size: cover;
     text-align: center;
     width: 100%;
     padding: 60px 20px 40px;
-    border-bottom: 4px solid #F44A4A;
+    border-bottom: 4px solid hsl(45, 90%, 60%);
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4)
 }
 
 h1 {
@@ -37,8 +44,10 @@ h1 {
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/*studentessa FS*/
+
 header p {
-    color: #F44A4A;
+    color: #f0e7c8;
     font-style: italic;
 }
 
@@ -58,11 +67,12 @@ nav ul li {
     padding: 8px 16px;
     margin: 0 4px;
     border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 nav ul li:hover {
-    color: #F44A4A;
-    background-color: #e0e0e0;
+    color: hsl(45, 90%, 60%);
+    background-color: hsl(45, 90%, 60%);
 }
 
 
@@ -87,7 +97,7 @@ main {
 }
 
 h2 {
-    color: #1F3D7A;
+    color: hsl(220, 60%, 25%);
     font-size: 1.65em;
     padding-top: 0.8em;
     padding-bottom: 0.8em;
@@ -96,9 +106,10 @@ h2 {
 main section {
     padding: 32px;
     margin-bottom: 24px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid #e6e0d3;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+    background-color: #FFFFFF;
 }
 
 /*Link Torna Su presente sotto ogni sezione*/
@@ -118,11 +129,13 @@ main section {
     background-color: rgb(243, 184, 184);
 }
 
-/*trattino aggiunto*/
+/*simbolo aggiunto*/
 
 main section h2::before {
-    content: "- ";
-    color: #F44A4A;
+    content: '\2756';
+    color: hsl(45, 90%, 50%);
+    font-size: 0.7em;
+    padding: 0.5em;
 }
 
 /*Sezione Chi sono*/
@@ -131,12 +144,16 @@ main section h2::before {
     font-style: italic;
 }
 
+/*Capolettera*/
+
 #sezChisono p:first-of-type::first-letter {
     font-size: 3em;
     font-weight: bold;
     float: left;
     margin-right: 6px;
-    color: #F44A4A;
+    color: hsl(220, 60%, 30%);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: normal;
 }
 
 .bold {
@@ -151,7 +168,7 @@ main section h2::before {
 .avatar {
     width: 200px;
     height: 200px;
-    border: 4px solid #F44A4A;
+    border: 5px solid hsl(45, 90%, 60%);
     border-radius: 50%;
     float: left;
     margin: 0 24px 12px 0;
@@ -168,16 +185,61 @@ figcaption {
 
 /*Competenze*/
 
+.liste{
+    display: inline-block;
+    width: 100%;
+}
+
 .competenzeul {
     line-height: 1.7em;
 }
 
-.competenzeul li:nth-child(odd) {
-    background-color: #F5F7FB;
+.competenzeul li:first-child {
+    background-color: #F9F5EA;
 }
 
-.sezCompetenze {
-    clear: both;
+.rigaLiCom {
+    float: left;
+    width: 46%;
+}
+
+.rigaLiCom p:first-of-type {
+    font-weight: bold;
+    margin-bottom: 0%;
+}
+
+.rigaLiCom p:last-of-type {
+    font-style: italic;
+    font-size: 0.8em;
+    color: #807B6A;
+    margin-top: 0%;
+}
+
+.competenzeul li {
+    border-bottom: 2px solid #EEE9DC;
+}
+
+
+  
+
+
+/*Barra livello*/
+
+.barraLivello {
+    background-color: #ece6d8;
+    border: 5px solid black;
+    width: 50%;
+    height: 40px; 
+    border-radius: 20px;
+}
+
+.barraInterna {
+    background-color: hsl(45, 90%, 50%);
+    border: 5px solid black;
+    width: 50%;
+    height: 40px; 
+    border-radius: 20px;
+    margin-top: -7%;
 }
 
 /*Esperienze*/
@@ -185,9 +247,13 @@ figcaption {
 table,
 tr,
 td {
-    border: 2px solid black;
+    border: 1px solid #ece6d8;
     padding: 3px;
     text-align: center;
+}
+
+table th {
+    color: hsl(220, 60%, 25%);
 }
 
 table {
@@ -197,6 +263,7 @@ table {
 
 table caption {
     padding: 5px;
+    color: hsl(220, 30%, 40%);
 }
 
 td {
@@ -206,7 +273,11 @@ td {
 
 
 /*Progetti
-Ho ragruppato le classi perchè avevano dei valori in comune che devono restare sempre tali*/
+Ho ragruppato le classi perchè avevano dei valori in comune che devono restare sempre tali*
+link nei progetti: hsl(220, 60%, 30%)
+hover link nei progetti: hsl(220, 60%, 45%) - bordo hsl(45, 90%, 50%)
+link alla pagina progetti: hsl(220, 60%, 30%) - bordo hsl(45, 90%, 50%)
+hover link alla pagina progetti: hsl(220, 60%, 45%)*/
 
 .project-recipe,
 .project-card {
@@ -241,7 +312,19 @@ section article:first-of-type h3::after {
     font-size: 0, 75rem;
 }
 
-/*Contattami*/
+section article h3 {
+    color: hsl(220, 30%, 25%);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Contattami
+bordo campi form: 1px solid #d6cfbf
+sfondo campi form: #fbf8f1
+al focus: sfondo bianco - bordo hsl(220, 60%, 30%)
+placeholder: #a39b87
+label consenso: #2b2b2b
+button: testo bianco, sfondo hsl(220, 60%, 30%), shadow 0 2px 4px rgba(0, 0, 0, 0.1)
+hover button: sfondo hsl(220, 60%, 45%), shadow 0 4px 10px rgba(0, 0, 0, 0.18)*/
 
 label {
     color: #1F3D7A;
@@ -307,7 +390,10 @@ button:hover {
     font-size: 0.95rem;
 }
 
-/*Footer*/
+/*Footer 
+sfondo footer: hsl(220, 40%, 15%)
+icone social nel footer: rgba(255, 255, 255, 0.08)
+hover su icone social: testo hsl(220, 60%, 20%), sfondo hsl(45, 90%, 60%) */
 
 footer {
     background-color: #172136;
