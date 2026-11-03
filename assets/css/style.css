@@ -52,16 +52,16 @@ header p {
     font-style: italic;
 }
 
-/*Text Studente Full-Stack
+/*Text Studente Full-Stack*/
 .studentefs {
     font-weight: bold;
 }
-    */
 
 /*Unorder list Mappa della pagina*/
 header ul {
     color: whitesmoke;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 nav ul li {
@@ -134,6 +134,7 @@ main section {
     color: #1F3D7A;
     font-weight: bold;
     float: right;
+    margin-top: 5px;
 }
 
 .tornaSu:hover {
@@ -176,22 +177,36 @@ main section h2::before {
     font-style: italic;
 }
 
+figcaption {
+    display: none;
+}
+
+figure {
+    float: none;
+    display: block;
+    margin: 0 auto;
+}
+
 .avatar {
+    float: none;
+    margin: 0 auto;
+    display: block;
     width: 200px;
     height: 200px;
     border: 5px solid hsl(45, 90%, 60%);
     border-radius: 50%;
-    float: left;
-    margin: 0 24px 12px 0;
 }
 
-figure {
-    display: inline-block;
-    float: left;
-}
+@media (min-width: 768px) {
+    .avatar {
+        float: left;
+        margin: 0 24px 12px 0;
+    }
 
-figcaption {
-    display: none;
+    figure {
+        display: inline-block;
+        float: left;
+    }
 }
 
 /*Competenze*/
@@ -222,31 +237,33 @@ figcaption {
     float: left;
     width: 46%;
     margin-left: 2%;
+    margin-top: 10px;
 }
 
-.rigaLiCom p:first-of-type {
+.rigaLiCom p {
     font-weight: bold;
     margin-bottom: 0%;
+    margin-top: 0%;
 }
 
-.rigaLiCom p:last-of-type {
+.tecP {
     font-style: italic;
     font-size: 0.8em;
     color: #807B6A;
     margin-top: 0%;
+    max-width: 48%;
 }
 
 .competenzeul li {
     border-bottom: 2px solid #EEE9DC;
-    max-height: 125px;
     overflow: hidden;
 }
 
 .titoloLi {
     font-weight: bold;
     color: #223B6B;
-    margin-top: 0%;
-    margin-bottom: 0%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .titoloLi h4 {
@@ -309,14 +326,12 @@ table th {
     color: hsl(220, 60%, 25%);
     background-color: #F9F5EA;
     height: 2.5em;
-    /* padding-left: 1em; */
 }
 
 table {
-    width: 800px;
+    width: 100%;
     text-align: left;
     border-collapse: collapse;
-    
 }
 
 table caption {
@@ -328,6 +343,7 @@ table caption {
 
 td {
     padding-right: 0px;
+    width: 33%;
 }
 
 .tableTr {
@@ -335,6 +351,11 @@ td {
     margin-left: 2em;
 }
 
+@media (min-width: 576px) {
+    .esperienze {
+        overflow-x: auto;
+    }
+}
 
 /*Progetti
 Ho ragruppato le classi perchè avevano dei valori in comune che devono restare sempre tali*
@@ -348,7 +369,7 @@ section article {
     margin-bottom: 3%;
 }
 
-section article:nth-child(odd){
+section article:nth-child(odd) {
     background-color: #FBF8EF;
     border-left: 7px solid #1F3D7A;
     border-radius: 10px 10px 10px 10px;
@@ -413,30 +434,37 @@ textarea {
     border: 1px solid #d6cfbf;
 }
 
+@media (min-width: 768px) {
+    input,
+    textarea, #purpuse {
+        width: 500px;
+    }
+}
+
 input:focus {
     background-color: white;
-    border: 1px solid hsl(220, 60%, 30%) ;
+    border: 1px solid hsl(220, 60%, 30%);
 }
 
 textarea:focus {
     background-color: white;
-    border: 1px solid hsl(220, 60%, 30%) ;
+    border: 1px solid hsl(220, 60%, 30%);
 }
 
 
-textarea::placeholder{
+textarea::placeholder {
     color: #a39b87;
     font-style: italic;
 }
 
-input::placeholder{
+input::placeholder {
     color: #a39b87;
     font-style: italic;
 }
 
 #checkbox {
     width: 2%;
-    color:  #2b2b2b;
+    color: #2b2b2b;
 }
 
 select {
@@ -451,7 +479,7 @@ button {
     color: whitesmoke;
     background-color: hsl(220, 60%, 30%);
     font-weight: bold;
-    width: 30%;
+    width: 100%;
     margin-top: 3.5%;
     padding: 12px 24px;
     border: none;
@@ -459,22 +487,16 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+@media (min-width: 768px) {
+    button {
+        width: 250px;
+    }
+}
+
 button:hover {
     background-color: hsl(220, 60%, 45%);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
-
-/*AltriContatti
-
-.altriContatti {
-    background-color: #F5F7FB;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    border: 2px solid hsl(45, 90%, 60%);
-    border-radius: 5px;
-    text-align: center;
-    padding: 30px;
-    font-size: 0.95rem;
-}*/
 
 /*Footer*/
 
@@ -487,7 +509,7 @@ footer {
     width: 100%;
 }
 
-footer nav i{
+footer nav i {
     background-color: rgba(255, 255, 255, 0.08);
     color: whitesmoke;
     font-size: 2em;
@@ -496,7 +518,7 @@ footer nav i{
     border-radius: 50%;
 }
 
-footer nav i:hover{
+footer nav i:hover {
     color: testo hsl(220, 60%, 20%);
     background-color: hsl(45, 90%, 60%);
 }
