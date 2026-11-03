@@ -74,69 +74,44 @@
                             <div class="rigaLiCom">
                                 <p><i class="fa-brands fa-html5">&nbsp&nbsp</i> HTML5 semantico</p>
                             </div>
-                            <div class="barra">
-                                <div class="barraLivello">
-                                    <div class="barraInterna" id="html"></div>
-                                </div>
-                            </div>
                         </div>
                         <p class="tecP">Tag strutturali, attributi, accessibilità di base, form con validazione.</p>
                     </li>
                     <li>
                         <div class="tecLiv">
-                        <div class="rigaLiCom">
-                            <p><i class="fa-brands fa-css3-alt">&nbsp&nbsp</i>CSS3</p>
-                        </div>
-                        <div class="barra">
-                            <div class="barraLivello">
-                                <div class="barraInterna" id="css3"></div>
+                            <div class="rigaLiCom">
+                                <p><i class="fa-brands fa-css3-alt">&nbsp&nbsp</i>CSS3</p>
                             </div>
-                        </div>
                         </div>
                         <p class="tecP">Selettori, pseudo-classi, box model, float, pseudo-elementi, Google fonmts.</p>
                     </li>
                     <li>
                         <div class="tecLiv">
-                        <div class="rigaLiCom">
-                            <p><i class="fa-brands fa-git-alt">&nbsp&nbsp</i>Git e GitHub</p>
-                        </div>
-                        <div class="barra">
-                            <div class="barraLivello">
-                                <div class="barraInterna" id="git"></div>
+                            <div class="rigaLiCom">
+                                <p><i class="fa-brands fa-git-alt">&nbsp&nbsp</i>Git e GitHub</p>
                             </div>
-                        </div>
                         </div>
                         <p class="tecP">init, add, commit, push, repository remoti, pubblicazione su GitHub Pages.</p>
                     </li>
                     <li>
                         <div class="tecLiv">
-                        <div class="rigaLiCom">
-                            <p><i class="fa-solid fa-terminal">&nbsp&nbsp</i>Linea di comando</p>
-                        </div>
-                        <div class="barra">
-                            <div class="barraLivello">
-                                <div class="barraInterna" id="linea"></div>
+                            <div class="rigaLiCom">
+                                <p><i class="fa-solid fa-terminal">&nbsp&nbsp</i>Linea di comando</p>
                             </div>
                         </div>
-                        </div>
-                        <p class="tecP">Navigazione di cartelle, gestione file, comandi base di shell su macOS e Linux.</p>
+                        <p class="tecP">Navigazione di cartelle, gestione file, comandi base di shell su macOS e Linux.
+                        </p>
                     </li>
                     <li>
                         <div class="tecLiv">
-                        <div class="rigaLiCom">
-                            <p><i class="fa-brands fa-markdown">&nbsp&nbsp</i>Markdown e documentazione</p>
-                        </div>
-                        <div class="barra">
-                            <div class="barraLivello">
-                                <div class="barraInterna" id="markdown"></div>
+                            <div class="rigaLiCom">
+                                <p><i class="fa-brands fa-markdown">&nbsp&nbsp</i>Markdown e documentazione</p>
                             </div>
-                        </div>
                         </div>
                         <p class="tecP">README, documentazione tecnica, scrittura chiara per altri sviluppatori.</p>
                     </li>
                 </ul>
             </div>
-            <a href="#header" class="tornaSu">Torna su</a>
         </section>
 
         <!--Sezione esperienze-->
@@ -170,16 +145,15 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="#header" class="tornaSu">Torna su</a>
         </section>
 
         <!--Sezione progetti-->
 
-        <section class="project">
+        <section class="projects">
             <h2 id="progetti">Progetti</h2>
             <p>I lavori fatti durante le prime settimane di corso.</p>
 
-            <article class="project-recipe">
+            <article class="project-recipe project">
                 <h3>Pagina ricetta</h3>
                 <p>Una pagina con titolo, ingredienti e procedura. Esercizio di markup semantico applicato al
                     contenuto
@@ -189,7 +163,7 @@
                     &nbsp Vedi su GitHub</a>
             </article>
 
-            <article class="project-card">
+            <article class="project-card project">
                 <h3>Card di presentazione</h3>
                 <p>Un biglietto digitale con nome, ruolo e link ai social. Esercizio di sintesi sulla struttura
                     HTML.
@@ -198,7 +172,7 @@
                     &nbsp Vedi su GitHub</a>
             </article>
 
-            <article class="project-personal">
+            <article class="project-personal project">
                 <h3>Portfolio personale</h3>
                 <p>Questa pagina. Costruita da zero in cinque giorni, dal markup
                     HTLM alla stilizzazione del CSS, fino alla pubblicazione
@@ -207,15 +181,18 @@
                 <a href="javascript:void(0)" target="_blank" class="vediSu"><i class="fa-brands fa-github"></i>
                     &nbsp Vedi su GitHub</a>
             </article>
-
-            <a href="#header" class="tornaSu">Torna su</a></li>
         </section>
 
         <!--Contatti-->
 
-        <section>
-            <h2 id="contattami">Contattami</h2>
-            <p>Compila il form per scrivermi. Ti rispondo entro 24 ore.</p>
+        <section id="contatti">
+            <button id="apriContatti">Scrivimi</button>
+        </section>
+    </main>
+    <a href="#chiSono" class="tornaSu" aria-label="Torna su">↑</a>
+    <div id="overlayContatti" class="overlay" hidden>
+        <div class="modal">
+            <button class="close" id="chiudiContatti">✕</button>
             <form action="submit" method="get">
                 <label for="name">Nome</label>
                 <br />
@@ -247,25 +224,8 @@
                 <br />
                 <button type="submit"><i class="fa-solid fa-paper-plane"></i> Invia</button>
             </form>
-            <br />
-            <a href="#header" class="tornaSu">Torna su</a></li>
-        </section>
-
-        <!--
-        <div class="altriContatti">
-            <h4>Altri contatti</h4>
-            <p>Sono presente su queste piattaforme professionali, dove puoi seguire i miei progetti e contattarmi.
-                <br /><br />
-                Profilo GitHub: <a href="https://github.com/lisasciacca" target="_blank">github.com/lisasciacca</a>
-                <br />
-                Profilo Linkedin: <a href="https://linkedin.com/in/lisasciacca"
-                    target="_blank">linkedin.com/in/lisasciacca</a> <br />
-            </p>
-            <br />
-            <a href="#header" class="tornaSu">Torna su</a></li>
-            <br /><br />
-        </div>-->
-    </main>
+        </div>
+    </div>
 
     <!--Footer-->
 
@@ -280,6 +240,8 @@
             13 del Regolamento (UE) 2016/679.</p>
         <p>© 2026 Lisa Irene Sciacca -- Costruito a mano durante la prima settimana del corso Epicode</p>
     </footer>
+
+    <script src="assets/js/js.js"></script>
 </body>
 
 </html>

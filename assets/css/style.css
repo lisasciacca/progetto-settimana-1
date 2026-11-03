@@ -4,7 +4,6 @@
 *::before,
 *::after {
     box-sizing: border-box;
-    overflow: auto;
 }
 
 html,
@@ -16,6 +15,7 @@ body {
     padding: 0px;
     background-color: #f4f1ec;
     color: #2b2b2b;
+    scroll-padding-top: 300px;
 }
 
 h1,
@@ -32,17 +32,27 @@ header {
     background-position: center;
     text-align: center;
     width: 100%;
-    padding: 60px 20px 40px;
+    height: 360px;
+    padding: 20px;
     border-bottom: 4px solid hsl(45, 90%, 60%);
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4)
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+@media (min-width: 768px) {
+    header {
+        height: 270px;
+    }
 }
 
 h1 {
     color: whitesmoke;
     font-size: 3em;
     font-style: italic;
-    padding: 25px;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    overflow-y: hidden;
 }
 
 /*studentessa FS*/
@@ -61,7 +71,6 @@ header p {
 header ul {
     color: whitesmoke;
     font-weight: bold;
-    margin-bottom: 30px;
 }
 
 nav ul li {
@@ -99,10 +108,10 @@ i {
 
 main {
     max-width: 920px;
-    margin-top: -107px;
+    margin-top: 0;
     margin-left: auto;
     margin-right: auto;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 h2 {
@@ -120,21 +129,26 @@ main section {
     border-radius: 8px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
     background-color: #FFFFFF;
+    position: relative;
 }
 
 /*Link Torna Su presente sotto ogni sezione*/
 
 .tornaSu {
     background-color: white;
+    height: 48px;
+    width: 48px;
     border: 5px solid whitesmoke;
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: #1F3D7A;
     font-weight: bold;
-    float: right;
-    margin-top: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
 }
 
 .tornaSu:hover {
@@ -270,29 +284,6 @@ figure {
     margin: 2% 0 2% 0;
 }
 
-/*Barra livello*/
-
-.barra {
-    margin-top: 3%;
-    border-collapse: collapse;
-}
-
-.barraLivello {
-    background-color: #ece6d8;
-    width: 95%;
-    height: 1.2em;
-    margin: 0;
-    border-radius: 10px;
-}
-
-.barraInterna {
-    background-color: hsl(45, 90%, 50%);
-    height: 1.2em;
-    margin: 0;
-    border-collapse: collapse;
-    border-radius: 10px;
-}
-
 #html {
     width: 75%;
 }
@@ -357,11 +348,7 @@ td {
     }
 }
 
-/*Progetti
-Ho ragruppato le classi perchè avevano dei valori in comune che devono restare sempre tali*
-hover link nei progetti: 
-link alla pagina progetti: hsl(220, 60%, 30%) - bordo hsl(45, 90%, 50%)
-hover link alla pagina progetti: hsl(220, 60%, 45%)*/
+/*Progetti*/
 
 section article {
     border-radius: 5px;
@@ -397,15 +384,24 @@ section article:last-of-type {
 
 /*NEW content*/
 
-section article:first-of-type h3::after {
+/* Rendi la card posizionabile in modo assoluto rispetto a se stessa */
+.project {
+    position: relative;
+}
+
+/* Posiziona l'etichetta NEW sulla prima card */
+section article:first-of-type::after {
     content: "NEW";
-    display: inline-block;
     padding: 1px 4px;
     margin-left: 8px;
     background-color: #F44A4A;
     color: whitesmoke;
-    border-radius: 3px;
+    border-radius: 0 4px 0 4px;
     font-size: 1rem;
+
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 section article h3 {
@@ -413,10 +409,50 @@ section article h3 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-/*Contattami
-label consenso: #2b2b2b
-button: testo bianco, sfondo hsl(220, 60%, 30%), shadow 0 2px 4px rgba(0, 0, 0, 0.1)
-hover button: sfondo hsl(220, 60%, 45%), shadow 0 4px 10px rgba(0, 0, 0, 0.18)*/
+/*Form overlay modal*/
+
+#contatti {
+    padding-top: 0px;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.overlay [hidden] {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    padding: 30px 20px 20px 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.close {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    padding: 0;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+}
+
+form {
+    padding: 0;
+    margin: 0;
+}
 
 label {
     color: #1F3D7A;
@@ -432,13 +468,6 @@ textarea {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #fbf8f1;
     border: 1px solid #d6cfbf;
-}
-
-@media (min-width: 768px) {
-    input,
-    textarea, #purpuse {
-        width: 500px;
-    }
 }
 
 input:focus {
@@ -521,4 +550,8 @@ footer nav i {
 footer nav i:hover {
     color: testo hsl(220, 60%, 20%);
     background-color: hsl(45, 90%, 60%);
+}
+
+footer p {
+    padding: 10px;
 }
