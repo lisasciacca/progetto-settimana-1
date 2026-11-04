@@ -12,3 +12,17 @@ closeModal.addEventListener('click', (e) => {
 	overlay.style.display = 'none';
 });
 
+overlay.addEventListener('click', (e) => {
+	if (e.target === overlay) {
+        e.preventDefault();
+        overlay.style.display = 'none';
+    }
+});
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        if (overlay) {
+            overlay.style.display = 'none'; 
+        }
+    }
+});
