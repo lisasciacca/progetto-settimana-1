@@ -24,6 +24,97 @@ body {
     }
 }
 
+body:has(.overlay:not([hidden])) {
+  overflow: hidden;
+}
+
+@keyframes giant {
+    0% {
+        transform: scale(1)
+    }
+
+    20% {
+        transform: scale(1.5)
+    }
+
+    40% {
+        transform: scale(2)
+    }
+
+    60% {
+        transform: scale(2.5)
+    }
+
+    80% {
+        transform: scale(3)
+    }
+
+    100% {
+        transform: scale(3.5)
+    }
+}
+
+@keyframes spinShrink {
+    0% {
+        transform: scale(3.5) rotate(-2deg);
+        border-width: 10px;
+        border-color: hsla(0, 100%, 50%, 0.7);
+        /* Rosso semitrasparente */
+    }
+
+    25% {
+        transform: scale(1.8) rotate(90deg);
+        border-width: 22px;
+        /* Diventa molto spesso */
+        border-color: hsla(120, 100%, 50%, 0.5);
+        /* Verde semitrasparente */
+    }
+
+    50% {
+        transform: scale(0.2) rotate(180deg);
+        border-width: 6px;
+        /* Si assottiglia quando l'immagine è piccolissima */
+        border-color: hsla(240, 100%, 50%, 0.8);
+        /* Blu semitrasparente */
+    }
+
+    75% {
+        transform: scale(1.8) rotate(270deg);
+        border-width: 25px;
+        /* Raggiunge lo spessore massimo */
+        border-color: hsla(300, 100%, 50%, 0.6);
+        /* Magenta semitrasparente */
+    }
+
+    100% {
+        transform: scale(3.5) rotate(358deg);
+        border-width: 10px;
+        border-color: hsla(0, 100%, 50%, 0.7);
+    }
+}
+
+@keyframes overlay-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
 
 
 header {
@@ -36,7 +127,7 @@ header {
     height: 360px;
     border-bottom: 4px solid hsl(45, 90%, 60%);
     text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     z-index: 100;
     display: flex;
@@ -81,6 +172,9 @@ header {
                 margin: 0 4px;
                 border-radius: 4px;
                 border: 0.5px solid #FFFFFF;
+                transition:
+                    background-color 200ms ease,
+                    color 200 ms ease;
 
                 a {
                     color: #FFFFFF;
@@ -102,6 +196,7 @@ header {
 
             li:hover {
                 background-color: hsl(45, 90%, 60%);
+                transform: translateY(-2px);
             }
 
         }
@@ -230,6 +325,13 @@ main {
             border-radius: 50%;
             flex-shrink: 0;
             /* Impedisce all'immagine di rimpicciolirsi */
+            transition: transform 300ms ease;
+            z-index: 200;
+            position: relative;
+        }
+
+        .avatar:hover {
+            animation: giant 3s linear forwards, spinShrink 1.5s linear 3s infinite;
         }
     }
 
@@ -268,14 +370,12 @@ main {
     }
 
     .liste {
-        /* div */
         display: inline-block;
         width: 100%;
 
         .competenzeul {
             display: flex;
             flex-wrap: wrap;
-            /* Manda le chip a capo se necessario */
             gap: 8px;
             padding: 0;
             list-style: none;
@@ -287,6 +387,7 @@ main {
                 border-radius: 999px;
                 border-bottom: 2px solid #EEE9DC;
                 overflow: hidden;
+                transition: transform 150ms ease, background-color 150ms ease;
 
                 .tecLiv {
                     .rigaLiCom {
@@ -307,10 +408,19 @@ main {
                 }
             }
 
+            li:hover {
+                transform: translateY(-2px);
+                background-color: hsl(220, 60%, 40%);
+            }
+
             li:first-child {
                 background-color: hsl(45, 90%, 60%);
                 color: #2b2b2b;
                 font-weight: bold;
+            }
+
+            li:first-child:hover {
+                background-color: hsl(45, 90%, 50%);
             }
         }
     }
@@ -423,6 +533,13 @@ section {
     /* Rende la card posizionabile in modo assoluto rispetto a se stessa */
     .project {
         position: relative;
+        transition: transform 200ms ease-out,
+            box-shadow 200ms ease-out;
+    }
+
+    .project:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
     }
 }
 
@@ -541,6 +658,16 @@ section article h3 {
     display: none;
 }
 
+.overlay:not([hidden]) {
+
+    animation: overlay-in 0.3s ease forwards;
+}
+
+.overlay:not([hidden]) .modal {
+
+    animation: modal-in 0.3s ease forwards;
+}
+
 button {
     color: whitesmoke;
     background-color: hsl(220, 60%, 30%);
@@ -590,5 +717,13 @@ footer {
 
     p {
         padding: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important; 
+        transition-duration: 0.01 !important;
     }
 }
